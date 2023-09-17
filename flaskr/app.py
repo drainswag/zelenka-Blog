@@ -10,9 +10,11 @@ app = Flask(__name__)
 
 database_manager = DatabaseManager('postgresql://postgres:123123@localhost/postgres')
 app.database_manager = database_manager
+app.config['JSON_AS_ASCII'] = False
 
 jwt = JWTManager(app)
 
+database_manager.create_news()
 
 app.register_blueprint(blog_bp, database_manager=database_manager)
 app.register_blueprint(reviews_bp, database_manager=database_manager)

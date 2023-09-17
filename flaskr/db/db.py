@@ -4,6 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import func
+import csv
 
 Base = declarative_base()
 db = SQLAlchemy()
@@ -154,3 +155,26 @@ class DatabaseManager:
         user = session.query(Admins).filter_by(login=login, password=password).first()
         session.close()
         return user
+    
+    def create_news(self):
+        session = self.Session()
+        if session.query(Articles).count() == 0:
+            with open('news.csv', 'r', encoding='utf-8') as csvfile:
+                csv_reader = csv.DictReader(csvfile)
+                for row in csv_reader:
+                    article = Articles(
+                        category=row['category'],
+                        title=row['title'],
+                        content=row['content'],
+                        createdAt=int(row['createdAt']),
+                        preview_image_url=row['preview_image_url']
+                    )
+                    session.add(article)
+        if session.query(Admins).count() == 0:
+            admin = Admins(
+                            login='admin',
+                            password=123123,
+                        )
+            session.add(admin)
+        session.commit()
+        session.close()
