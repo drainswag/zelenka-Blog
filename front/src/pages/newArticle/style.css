@@ -1,0 +1,37 @@
+/* .edit-article-wrappper{
+    width: 82%;
+    display: flex;
+
+
+} */
+
+input{
+    appearance: none;
+    border: none;
+    background: none;
+}
+
+
+input:focus {
+    outline: none;
+  }
+  
+.new-article-title {
+    font-size: 3vw;
+    text-align: left;
+    /* width: 82%; */
+  
+}
+
+.new-article-photo {
+    font-size: 1vw;
+    width: 50%;
+}
+
+.new-article-body {
+    display: flex;
+    width: 82%;
+    align-self: center;
+    row-gap: 4vh;
+    flex-direction: column;
+}

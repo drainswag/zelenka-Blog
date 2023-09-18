@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+p,
+a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex: 1;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.5px solid rgb(0, 0, 0, 0.1);
+
+}
+
+.header-wrapper {
+    display: flex;
+    width: 82%;
+    margin: 1%;
+    column-gap: 4%;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+}
+
+/* .menuContainer {
+    display: flex;
+    align-items: center;
+
+} */
+
+a {
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    /* line-height: 80px; */
+    color: #000;
+}
+
+.menuContainer .menu li {
+    position: relative;
+    display: inline-block;
+    /* line-height: 80px; */
+    /* margin-right: 32px; */
+}
+
+/* li:hover{
+   
+} */
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.logo-wrapper p {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #00ab6b;
+    /* font-family: 'Bebas Neue', sans-serif; */
+    font-weight: 900;
+}
+
+.menuContainer {
+    display: flex;
+    align-items: center;
+
+}
+
+a:hover {
+    color: #00ab6b;
+}
+
+/* ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+} */

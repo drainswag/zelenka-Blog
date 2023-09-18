@@ -1,0 +1,23 @@
+.pagination {
+    cursor: pointer;
+    list-style-type: none;
+    display: inline-flex;
+    align-self:center;
+    gap: 0.68vh;
+    color: #565656;
+    font-family: 'Poppins';
+    font-size: 2.14vh;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.4px;
+    justify-self: center;
+}
+
+.pagination__link--active{
+    color: #B6FFDB;
+
+}
+.pagination__link{
+    cursor: pointer;
+}
