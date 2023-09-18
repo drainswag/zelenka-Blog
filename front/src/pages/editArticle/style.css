@@ -1,0 +1,59 @@
+/* .edit-article-wrappper{
+    width: 82%;
+    display: flex;
+
+
+} */
+
+.edit-article-title {
+    font-size: 52px;
+    text-align: left;
+    /* width: 82%; */
+    appearance: none;
+    border: none;
+    background: none;
+}
+
+.edit-article-body {
+    display: flex;
+    width: 82%;
+    align-self: center;
+    row-gap: 4vh;
+    flex-direction: column;
+}
+
+/* .art-wrappper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vh;
+
+} */
+
+.content-area {
+    appearance: none;
+    border: none;
+    background: none;
+}
+
+
+
+
+.edit-button {
+    width: 14%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: .2s linear;
+    background: #00ab6b;
+}
+
+.edit-button:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #00ab6b;
+}
+
+.edit-button p {
+       font-size: 1.5vw;
+        padding: 0.2vw;
+    
+}

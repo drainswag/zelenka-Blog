@@ -1,0 +1,10 @@
+FROM python:3.8-slim
+
+WORKDIR /app/back
+
+COPY ./back/requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY ./back .
+
+CMD ["python", "back/app.py"]
